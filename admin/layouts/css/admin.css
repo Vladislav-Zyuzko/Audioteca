@@ -57,7 +57,7 @@ body {
 /* -----------------------------------------------------------ЦВЕТОВАЯ СХЕМА----------------------------------------------------------*/
 
 :root {
-	--color-basic_white: #EEFEFF;
+	--color-basic_white: #FFFFFF;
 	--color-dark_grey: #4D4D4D;
 	--color_basic_grey: #D9D9D9;
 	--color_basic_black: #2B2B2B;
@@ -159,9 +159,236 @@ body {
 }
 
 main {
+	overflow: auto;
 	width: 74%;
 	height: 100%;
 	background-color: var(--color-basic_white);
 }
+
+/*------------------------------------------------------КОМПОЗИЦИИ (ГЛАВНАЯ)-----------------------------------------------------*/
+
+.admin_tracks_container {
+	width: 100%
+}
+
+.admin_track_container {
+	margin-top: calc(7.6vw * 74 / 100 * 0.6);
+	display: flex;
+	width: 100%;
+	height: calc(7.6vw * 74 / 100);
+}
+
+.admin_track_num {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 36px;
+	font-weight: 800;
+	width: 10%;
+	height: 100%;
+}
+
+.admin_track_cover {
+	background-color: var(--color_basic_black);
+	width: 7.6%;
+	height: 100%;
+}
+
+.admin_track_cover img {
+	height: 100%;
+	width: 100%;
+}
+
+.admin_track_title {
+	display: flex;
+	align-items: center;
+	padding-left: 2%;
+	width: 61%;
+	height: 100%;
+	font-size: 36px;
+	font-weight: 600;
+	color: var(--color_basic_black);
+	background-color: var(--color_basic_grey);
+
+}
+
+.admin_track_buttons {
+	width: 11.4%;
+	height: 100%;
+	display: flex;
+	background-color: var(--color-dark_grey);
+	justify-content: space-around;
+	align-items: center;
+	transition: 0.5s;
+}
+
+.admin_track_buttons:hover {
+	background-color: var(--color_basic_black);
+	transition: 0.5s;
+}
+
+.admin_track_buttons button {
+	border-radius: 50%;
+	width: 43%;
+	height: 65%;
+	cursor: pointer;
+	background-color: inherit;
+}
+
+.admin_track_buttons button:hover {
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
+/*------------------------------------------------------ОБЩЕЕ--------------------------------------------------------------------*/
+
+.admin_add_link_button {
+	padding: 5px 5px;
+	margin-left: 74%;
+	margin-top: 2.5%;
+	height: 37px;
+	border-radius: 30px;
+	background-color: var(--color-dark_grey);
+	cursor: pointer;
+}
+
+.admin_add_link_button:hover {
+	background-color: var(--color_basic_black);
+	transition: 0.5s;
+}
+
+.admin_add_link_button_content {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.admin_add_link_button_icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 5px;
+}
+
+.admin_add_link_button_icon  img{
+	width: 30px;
+	height: 30px;
+}
+
+.admin_add_link_button_title {
+	padding: 0px 5px;
+	font-size: 25px;
+	font-weight: 600;
+	color: var(--color-basic_white);
+}
+
+.admin_section_title {
+	margin-top: 2%;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	font-weight: 600;
+	color: var(--color_basic_black);
+}
+
+.append_form_container {
+	margin-left: 25%;
+	padding: 2.5% 5%;
+	background-color: var(--color_basic_grey);
+	margin-top: 4%;
+	width: 50%;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	font-size: 24px;
+	color: var(--color_basic_black);
+}
+
+.text_input_field {
+	margin-top: 5px;
+	font-size: 24px;
+}
+.list_input_field {
+	margin-top: 5px;
+	font-size: 24px;
+}
+
+.image_input_container {
+	display: flex;
+	height: 65px;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.image_title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 60%;
+	height: 100%;
+}
+
+.image_input_field {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.image_cover {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	height: 100%;
+	width: 40%;
+}
+
+.image_cover img {
+	border-radius: 15px;
+	height: 100%;
+}
+
+.track_input_field {
+	margin-top: 5px;
+}
+
+.admin_submit_button_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 100%;
+}
+
+.admin_submit_button {
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: var(--color-basic_white);
+	font-size: 24px;
+	font-weight: 600;
+	padding: 2px;
+	border-radius: 15px;
+	background-color: var(--color-dark_grey);
+	height: 100%;
+	width: 100%;
+}
+
+.admin_submit_button:hover {
+	background-color: var(--color_basic_black);
+	transition: 0.5s;
+	transform: scale(1.07);
+}
+
+
+
+
+
 
 
