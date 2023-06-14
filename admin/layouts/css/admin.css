@@ -242,9 +242,16 @@ main {
 
 /*------------------------------------------------------ОБЩЕЕ--------------------------------------------------------------------*/
 
+.admin_add_link_button_container {
+	display: flex;
+	width: 40%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
 .admin_add_link_button {
 	padding: 5px 5px;
-	margin-left: 74%;
 	margin-top: 2.5%;
 	height: 37px;
 	border-radius: 30px;
@@ -329,7 +336,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 60%;
+	width: 70%;
 	height: 100%;
 }
 
@@ -345,7 +352,7 @@ main {
 	justify-content: right;
 	align-items: center;
 	height: 100%;
-	width: 40%;
+	width: 30%;
 }
 
 .image_cover img {
@@ -385,6 +392,70 @@ main {
 	transition: 0.5s;
 	transform: scale(1.07);
 }
+
+.admin_alert_container {
+	display: flex;
+	width: 60%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.admin_success_alert {
+	display: flex;
+	padding: 5px 0px;
+	background-color: #8af69b;
+	color: var(--color_basic_black);
+	opacity: 0.9;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	font-size: 25px;
+	font-weight: 600;
+
+}
+
+.admin_info_panel {
+	display: flex;
+	height: 37px;
+	width: 100%;
+	margin-top: 2.5%;
+}
+
+.fix_form {
+	display: flex;
+	justify-content: center;
+	padding-top: 15%;
+	width: 50%;
+	height: 100%;
+}
+
+.delete_form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+}
+
+.file_form {
+	display: flex;
+	margin-top: 5px;
+	align-items: center;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+	height: 50%;
+	font-size: 14px;
+
+}
+
+.file_form_button {
+	padding: 2.5px;
+	border: 1px solid;
+	margin-right: 5px;
+}
+
+
 
 
 

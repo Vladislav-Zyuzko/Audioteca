@@ -14,7 +14,7 @@ const player_song_title = document.querySelector('.player_song_title'),
       player_volume_icon = document.getElementById('player_volume_icon'),
 
       player_mode_button = document.getElementById('player_mode_button'),
-      player_mode_icon = document.getElementById('player_mode_icon')
+      player_mode_icon = document.getElementById('player_mode_icon'),
 
       max_audio_id = document.querySelectorAll('.track').length
 
