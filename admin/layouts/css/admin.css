@@ -486,7 +486,107 @@ main {
 	margin-right: 5px;
 }
 
+/*---------------------------------------------------------ВХОД И ЗАЩИЩИТА------------------------------------------------------*/
 
+.admin_input_title {
+	margin-top: 7%;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	height: 10%;
+	color: var(--color_basic_black);
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.admin_input_form {
+	margin-top: 7%;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.admin_input_form_container {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	padding: 20px;
+	background-color: var(--color_basic_grey);
+	border-radius: 30px;
+	justify-content: center;
+	align-items: center;
+}
+
+.admin_input {
+	color: var(--color_basic_black);
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.admin_input_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0px;
+}
+
+.admin_accept_login_button_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45%;
+
+}
+
+.admin_accept_login_button {
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: var(--color-basic_white);
+	font-size: 24px;
+	font-weight: 600;
+	padding: 2px;
+	border-radius: 15px;
+	background-color: var(--color-dark_grey);
+	height: 100%;
+	width: 45%;
+}
+
+.admin_accept_login_button:hover {
+	background-color: var(--color_basic_black);
+	transition: 0.5s;
+	transform: scale(1.07);
+}
+
+.failed_input_container {
+	margin-top: 2.5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	height: 5%;
+	width: 40%;
+	background-color: #ffabab;
+	padding: 5px;
+	color: var(--color_basic_black);
+}
+
+.warning_input_container {
+	margin-top: 2.5%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	height: 5%;
+	width: 40%;
+	background-color: #fdfebf;
+	padding: 5px;
+	color: var(--color_basic_black);
+}
 
 
 

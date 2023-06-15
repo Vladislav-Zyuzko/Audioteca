@@ -1,0 +1,51 @@
+<div class="admin_section_title" style="margin-top: 4%;">
+    Изменение существующего жанра
+</div>
+
+<form action="../admin/genres.php" method="post" name="fix_genre_form" enctype="multipart/form-data",>
+    <div class="append_form_container">
+        Название жанра: <input type="text" name="fix_name_genre" class="text_input_field" value="OLD_TITLE"><br>
+        <div class="image_input_container">
+            <div class="image_title">
+                <div style="height: 80%;">
+                    Обложка жанра: 
+                    <div class="file_form">
+                        <input class="file_form_button" type="button" onclick="document.getElementById('genre_cover_input').click()" value="Выберите файл" /><br>
+                        <span id="imageNameSpan">SHORT_IMAGE_SRC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image_cover">
+                <img id="image-preview" src=IMAGE_SRC>
+            </div>
+        </div>
+        <br>
+        <div class="admin_submit_button_bottom_container">
+            <button type="submit" class="admin_submit_bottom_button">Принять изменения</button>
+        </div>
+    </div>
+    <input type="file" name="fix_genre_cover" id="genre_cover_input" onchange="ImageSelected()" style="width: 0;">
+    <input type="text" name="old_cover_src" style="width: 0;" value="SHORT_IMAGE_SRC">
+    <input type="text" name="old_genre_id" style="width: 0;" value="OLD_GENRE_ID">
+</form>
+
+<script>
+    function ImageSelected(e) {
+        file = document.getElementById('genre_cover_input').files[0];
+        document.getElementById('imageNameSpan').innerHTML = file.name;
+        displayImage();
+    }
+    function displayImage() {
+      var preview = document.querySelector('#image-preview');
+      var file = document.querySelector('#genre_cover_input').files[0];
+      var reader = new FileReader();
+  
+      reader.addEventListener("load", function () {
+        preview.src = reader.result;
+      }, false);
+  
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>

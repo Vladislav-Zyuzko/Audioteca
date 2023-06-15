@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Аудиотека</title>
+	<link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="layouts/css/admin.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap&subset=cyrillic-ext" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <div class="admin_input_title">
+            Вход в панель администирования сайта
+        </div>
+    </header>
+    <form action="../admin/admin.php" class="admin_input_form" method="post">
+        <div class="admin_input_form_container">
+            <div class="admin_input_container">
+                <input type="text" placeholder="Логин" name="login" class="admin_input">
+            </div>
+            <div class="admin_input_container">
+                <input type="text" placeholder="Пароль" name="password" class="admin_input">
+            </div>
+            <br>
+            <div class="admin_accept_login_button_container">
+                <input type="submit" value="Войти" class="admin_accept_login_button">
+            </div>
+        </div>
+    </form>
+    
