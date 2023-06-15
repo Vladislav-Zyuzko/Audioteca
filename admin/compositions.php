@@ -62,7 +62,7 @@ elseif (isset($_POST["track_title"])) {
     addNewTrackToDB($link, $image_file_name, $track_file_name);
 
     getMainContent($link, $content);
-    $content["SUCCESS_ALERT"] = " Трек " . $_POST["track_title"] . " успешно добавлен! ";
+    $content["SUCCESS_ALERT"] = " &nbsp Трек " . $_POST["track_title"] . " успешно добавлен! &nbsp ";
     $template = file_get_contents("layouts/layout.html").file_get_contents("layouts/compositions/compositions.html").file_get_contents("layouts/footer.html");
 }
 elseif (isset($_POST["fix_track_title"])) {
@@ -104,7 +104,7 @@ elseif (isset($_POST["fix_track_title"])) {
     $rs = mysqli_query($link, $sql) or die(mysqli_error($link));
 
     getMainContent($link, $content);
-    $content["SUCCESS_ALERT"] = " Трек " . $_POST["fix_track_title"] . " успешно обновлен! ";
+    $content["SUCCESS_ALERT"] = " &nbsp Трек " . $_POST["fix_track_title"] . " успешно обновлен! &nbsp ";
     $template = file_get_contents("layouts/layout.html").file_get_contents("layouts/compositions/compositions.html").file_get_contents("layouts/footer.html");
     
     print_r($old_files_count);
@@ -164,7 +164,7 @@ function getMainContent($dblink, &$data) {
                             </button>
                         </form>
                         <div class=\"delete_form\">
-                            <button  style=\"width: 100%;\" id=\"track_delete_button_$item[__ID__]\" onclick=\"confirmDelete($item[__ID__])\" value=\"$item[__TITLE__]\">
+                            <button  style=\"width: 100%;\" id=\"track_delete_button_$item[__ID__]\" onclick=\"confirmDeleteTrack($item[__ID__])\" value=\"$item[__TITLE__]\">
                                 <img src=\"../../images/icons/delete.png\">
                             </button>
                         </div>

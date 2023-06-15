@@ -1,0 +1,42 @@
+<div class="admin_section_title" style="margin-top: 4%;">
+    Добавление нового исполнителя
+</div>
+
+<form action="../admin/authors.php" method="post" name="add_author_form" enctype="multipart/form-data">
+    <div class="append_form_container">
+        Имя исполнителя: <input type="text" name="name_author" class="text_input_field"><br>
+        Основной жанр: <select name="author_genre" class="list_input_field">
+            GENRES
+        </select><br>
+        <div class="image_input_container">
+            <div class="image_title">
+                <div style="height: 80%;">
+                    Обложка исполнителя: <br> <input type="file" id="author_cover" name="author_cover" class="image_input_field" onchange="displayImage()"><br>
+                </div>
+            </div>
+            <div class="image_cover">
+                <img id="image-preview" src="../../../images/compositions/default.png">
+            </div>
+        </div>
+        <br>
+        <div class="admin_submit_button_bottom_container">
+            <button type="submit" class="admin_submit_bottom_button">Добавить исполнителя</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    function displayImage() {
+      var preview = document.querySelector('#image-preview');
+      var file = document.querySelector('#author_cover').files[0];
+      var reader = new FileReader();
+  
+      reader.addEventListener("load", function () {
+        preview.src = reader.result;
+      }, false);
+  
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>

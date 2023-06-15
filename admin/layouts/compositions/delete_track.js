@@ -1,5 +1,5 @@
 
-function confirmDelete(trackId) {
+function confirmDeleteTrack(trackId) {
   track_delete = document.getElementById('admin_track_container_' + trackId);
   track_delete_button = document.getElementById('track_delete_button_' + trackId);
   track_title = track_delete_button.getAttribute('value');
