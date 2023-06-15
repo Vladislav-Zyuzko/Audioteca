@@ -41,7 +41,10 @@
             echo strtr($template, $content);
         }
         elseif(isset($_POST["name_genre"])) {
-            $image_file_name = saveFileToDirectory("genre_cover", "../images/genres/", $link, 0);
+
+            if ($_FILES["genre_cover"]["size"] != 0) {
+                $image_file_name = saveFileToDirectory("genre_cover", "../images/genres/", $link, 0);
+            } else {$image_file_name = "default.png";}
 
             addNewGenreToDB($link, $image_file_name);
 
@@ -218,7 +221,9 @@
             $url_cover = "../" . $item["__COVER__"];
         }
     
-        unlink($url_cover);
+        if (basename($url_cover) != "default.png") {
+            unlink($url_cover);
+        }
     }
 
     function getGenreTitleByID($dblink, $genreId) {

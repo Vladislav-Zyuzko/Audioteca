@@ -58,7 +58,10 @@
         }
         elseif (isset($_POST["track_title"])) {
 
-            $image_file_name = saveFileToDirectory("track_cover", "../images/compositions/", $link, 0);
+            if ($_FILES["track_cover"]["size"] != 0) {
+                $image_file_name = saveFileToDirectory("track_cover", "../images/compositions/", $link, 0);
+            } else {$image_file_name = "default.png";}
+
             $track_file_name = saveFileToDirectory("track", "../music/", $link, 0);
 
             addNewTrackToDB($link, $image_file_name, $track_file_name);
@@ -378,8 +381,9 @@
             $url_cover = "../" . $item["__COVER__"];
             $url_file = "../" . $item["__FILE__"];
         }
-
-        unlink($url_cover);
+        if (basename($url_cover) != "default.png") {
+            unlink($url_cover);
+        }
         unlink($url_file);
     }
 

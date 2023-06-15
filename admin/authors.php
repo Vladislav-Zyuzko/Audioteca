@@ -50,7 +50,10 @@
             echo strtr($template, $content);
         }
         elseif(isset($_POST["name_author"])) {
-            $image_file_name = saveFileToDirectory("author_cover", "../images/authors/", $link, 0);
+
+            if ($_FILES["author_cover"]["size"] != 0) {
+                $image_file_name = saveFileToDirectory("author_cover", "../images/authors/", $link, 0);
+            } else {$image_file_name = "default.png";}
 
             addNewAuthorToDB($link, $image_file_name);
 
@@ -291,7 +294,9 @@
             $url_cover = "../" . $item["__COVER__"];
         }
 
-        unlink($url_cover);
+        if (basename($url_cover) != "default.png") {
+            unlink($url_cover);
+        }
     }
 
     function getAuthorNameByID($dblink, $authorId) {
