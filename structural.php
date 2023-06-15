@@ -83,6 +83,7 @@ function getMainContent($dblink, &$data) {
 function getGenresList($dblink, &$data) {
 
     $sql = "SELECT
+                id_genre AS __ID__,
                 title AS __TITLE__ 
             FROM genres";
 
@@ -90,11 +91,15 @@ function getGenresList($dblink, &$data) {
 
     $o = "";
     foreach ($rs as $item) {
-        $o .=   "<div class=\"genres_list_genre_container\">
-                    <div class=\"genres_list_genre\">
-                        $item[__TITLE__]
-                    </div>
-                </div>";
+        $o .=   "<form action=\"genres.php\" class=\"genres_list_form\" method=\"post\">
+                    <button class=\"genres_list_button\" name=\"select_genre\" value=\"$item[__ID__]\">
+                        <div class=\"genres_list_genre_container\" >
+                            <div class=\"genres_list_genre\">
+                                $item[__TITLE__]
+                            </div>
+                        </div>
+                    </button>
+                </form>";
     };
     $data["__GENRES_LIST__"] = $o;
 

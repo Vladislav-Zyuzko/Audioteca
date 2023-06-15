@@ -182,6 +182,18 @@ body {
 	padding: 15px 0px;
 }
 
+.genres_list_form {
+	background-color: var(--color_basic_brown);
+}
+
+.genres_list_button {
+	background-color: var(--color_basic_brown);
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+
+}
+
 .genres_list_genre_container {
 	display: flex;
 	min-height: 100px;
@@ -196,7 +208,11 @@ body {
 	background-color: var(--color-basic_white);
 	justify-content: space-around;
 	align-items: center;
+	font-size: 24px;
+	font-weight: 600;
 }
+
+
 
 .genres_list_genre:first-child {
 	margin-top: 0px;
